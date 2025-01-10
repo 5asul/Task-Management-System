@@ -1,0 +1,145 @@
+/* src/components/Navbar.css */
+
+/* الشريط الجانبي */
+.sidebar {
+    width: 25%; /* عرض ثابت للشريط الجانبي */
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 100vh; /* يملأ ارتفاع الشاشة بالكامل */
+    position: fixed; /* يبقى ثابتًا أثناء التمرير */
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
+  }
+  
+  /* رأس الشريط الجانبي */
+  .sidebar-header {
+    background-color: var(--header-background);
+    color: var(--header-text-color);
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* قائمة الروابط */
+  .sidebar-nav {
+    list-style: none;
+    padding: 0;
+    flex: 1; /* تأخذ كامل المساحة المتبقية */
+  }
+  
+  /* عناصر القائمة */
+  .sidebar-nav li {
+    margin-bottom: 15px;
+  }
+  
+  /* الروابط */
+  .sidebar-nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+  }
+  
+  /* تأثير التمرير على الروابط */
+  .sidebar-nav li a:hover {
+    background-color: var(--secondary-color);
+    padding-left: 15px; /* تحريك النص قليلاً عند التمرير */
+  }
+  
+  /* العنصر النشط */
+  .sidebar-nav li a.active {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding-left: 15px;
+  }
+  
+  /* أيقونات الروابط */
+  .nav-icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+  }
+  
+  /* النصوص */
+  .nav-text {
+    display: inline-block;
+  }
+  
+  /* استجابة الشريط الجانبي للشاشات الصغيرة */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 60px;
+    }
+  
+    .sidebar-header {
+      display: none; /* إخفاء العنوان لتوفير المساحة */
+    }
+  
+    .sidebar-nav li a {
+      justify-content: center;
+      padding: 10px 0;
+    }
+  
+    .sidebar-nav li a .nav-text {
+      display: none; /* إخفاء النصوص */
+    }
+  
+    .sidebar-nav li a .nav-icon {
+      margin: 0;
+    }
+  
+    .sidebar-nav li a.active {
+      padding-left: 0;
+    }
+  }
+  
+  
+
+
+/* .sidebar {
+    margin: auto;
+    width: 200px;
+    background: #f1f1f1;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh; 
+    position: fixed; 
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 20px;
+    color: var(--primary); 
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 15px;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .sidebar ul li a:hover {
+    color: var(--primary);
+  } */
+  
