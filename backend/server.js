@@ -3,9 +3,10 @@ const cors = require('cors');
 require('dotenv').config();
 const connectDB = require('./config/db');
 const taskRoutes = require('./routes/taskRoutes');
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const app = express();
-const corsOptions = { origin: 'http://localhost:3000', optionsSuccessStatus: 200 };
+const corsOptions = { origin: `${baseURL}`, optionsSuccessStatus: 200 };
 // Connect to MongoDB
 connectDB();
 
