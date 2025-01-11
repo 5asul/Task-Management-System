@@ -36,6 +36,9 @@ app.use((req, res, next) => {
   next()
 })
 
+app.options('*', cors(corsOptions)); // Enable preflight requests for all routes
+
+
 // Routes
 app.use('/api/tasks', taskRoutes);
 
