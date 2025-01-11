@@ -6,7 +6,7 @@ const taskRoutes = require('./routes/taskRoutes');
 
 
 const app = express();
-const corsOptions = { origin: 'http://localhost:3000', optionsSuccessStatus: 200 };
+const corsOptions = { origin: 'https://task-management-system-front.vercel.app', optionsSuccessStatus: 200 };
 // Connect to MongoDB
 connectDB();
 

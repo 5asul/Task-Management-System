@@ -8,7 +8,7 @@ const TasksPage = () => {
 
   useEffect(() => {
     const fetchTasks = async () => {
-      const response = await fetch('https://task-management-system-back.vercel.app/api/tasks/')
+      const response = await fetch('https://task-management-system-back.vercel.app/api/tasks')
       const json = await response.json()
 
       if (response.ok) {
