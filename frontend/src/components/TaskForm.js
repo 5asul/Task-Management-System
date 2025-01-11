@@ -16,7 +16,7 @@ const TaskForm = ()=>{
 
         const task = {title, description, dueDate }
 
-        const response = await fetch('https://task-management-system-back.vercel.app/api/tasks',{
+        const response = await fetch('https://task-management-system-back.vercel.app/api/tasks/',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
