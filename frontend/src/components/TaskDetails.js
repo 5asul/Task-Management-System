@@ -7,7 +7,7 @@ const TaskDetails = ({task})=> {
 
 
     const handleClick = async()=>{
-        const response = await fetch('/api/tasks/'+task._id,{
+        const response = await fetch('https://task-management-system-back.vercel.app/api/tasks/'+task._id,{
             method: 'DELETE',
            
         })
